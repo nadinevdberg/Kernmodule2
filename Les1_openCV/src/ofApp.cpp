@@ -32,7 +32,7 @@ void ofApp::update() {
 
 		hsvImage.convertToGrayscalePlanarImages(hue, saturation, value); 
 		//als ieder pixeltje matcht met wat we aangeklikt hebben (marge), dan wit pixel, anders zwart
-		if (testBool = true) {
+		if (testBool == true) {
 			for (int i = 0; i < GRABBER_WIDTH*GRABBER_HEIGHT; i++) {
 				{
 					if (ofInRange(hue.getPixels()[i],
@@ -50,7 +50,7 @@ void ofApp::update() {
 				}
 			}
 		}
-		if (testBool = false){
+		if (testBool == false){
 		for (int i = 0; i < GRABBER_WIDTH*GRABBER_HEIGHT; i++){
 			
 				if (ofInRange(hue.getPixels()[i],
@@ -115,7 +115,7 @@ void ofApp::keyPressed(int key)
 
 	if (key == 'i') {
 		ikDRUKTOCH = !ikDRUKTOCH;
-		ofLog() << ikDRUKTOCH;
+		ofLog() << "ik druk toch" << ikDRUKTOCH;
 	}
 
 	if (key == 'j') {
@@ -128,14 +128,16 @@ void ofApp::mousePressed(int x, int y, int button)
 {
 	//pak de hue van waar je op klikt. y as maal aantal pixels die in de breedte zitten, +x
 	
-	
+	if (testBool == true) {
 		findHue1 = hue.getPixels()[y*GRABBER_WIDTH + x];
 		ofLog() << "bool is true, hue1 = " << findHue1;
-		
-	
+	}
+
+	if (testBool == false) {
+
 		findHue2 = hue.getPixels()[y*GRABBER_WIDTH + x];
 		ofLog() << "bool is false, hue 2 = " << findHue2;
-		
+	}
 	
 }
 
