@@ -15,7 +15,11 @@ class ofApp : public ofBaseApp{
 		ofVideoGrabber grabber;
 		ofxCvHaarFinder haarFinder;
 
-		bool drawBox = true;
+		ofxCvHaarFinder haarFinder2;
+
+		bool drawBox = false;
 		bool drawImage = true;
+		bool drawBaard = true;
 		ofImage image;
+		ofImage mouth;
 };

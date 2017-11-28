@@ -1,0 +1,20 @@
+	void selectColor(int x, int y);  // mouse pressed functie
+	ofPoint getCentroid();
+	void toggleSetup();
+	void toggleBlobs();
+	bool haveBlobs();
+
+
+
+private:
+	ofVideoGrabber grabber;
+
+	ofxCvColorImage cameraImage;
+	ofxCvGrayscaleImage hue;
+	ofxCvGrayscaleImage filteredImage;
+
+	ofxCvContourFinder contours;
+
+	bool showSetup = true;
+	bool showBlobs = true;
+	int selectedHue = -1;
