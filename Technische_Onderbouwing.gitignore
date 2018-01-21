@@ -1,0 +1,44 @@
+Wat wil ik dat de arduino doet?
+
+Als Moni aangeraakt word, wil ik dat er een geluidsbestand afgespeeld wordt. 
+Ik wil Moni verdelen in delen en ik wil dat ieder deel een sensor bevat dat een ander geluidsbestand activeert.
+In mijn prototype heb ik dit met een buzzer gedaan en speelt hij een andere toonhoogte per sensor.
+
+Als Moni 3x aangeraakt is, wil ik dat moni een geluidsbestand afspeelt waarin gezegd wordt dat de student de balie moet begroeten.
+Tegelijkertijd wil ik dat licht gaat schijnen, met een dimeffect.
+In mijn prototype gaat het LEDje branden, maar helaas zonder dim effect. 
+
+Vervolgens wil ik dat Moni weer 'reset' en dit alles opnieuw kan gebeuren.
+
+In de ideale versie zou ik nog met een afstandssensor, kinect, leap motion of een andere soort sensor kunnen werken die registreert
+of de student naar de balie kijkt en/of zwaait, zodat het licht alleen gaat schijnen als de student daadwerkelijk de balie begroet.
+
+
+
+Onderbouwing hardware
+Waarom werk ik met lichtsensors?
+Ik heb als eerste lichtsensors geprobeerd en daarna een druksensor. Omdat moni alleen oppervlakkig aangeraakt moet worden, en niet ingedrukt,
+was een druksensor niet geschikt. De lichtsensor werkte goed. Ik kan met lichtsensors ervoor zorgen dat ik verschillende plekken kan aanraken
+die voor verschillende resultaten zorgen. Het nadeel vind ik wel dat je heel erg afhankelijk ben van, je raad het al, licht. In een ideaal
+ontwerp zou ik opzoek gaan naar een betere oplossing of zou ik ervoor zorgen dat ik een lichtbron in de hele installatie verwerk die ervoor
+zorgt dat het licht altijd hetzelfde is. 
+
+Waarom werk ik met geluid?
+Door gebruik te maken van geluid kan ik mijn gebruiker aansturen. Ze krijgen direct feedback op hun aanraking en krijgen na 3x instructies
+over de volgende stap. 
+
+Waarom werk ik met licht?
+In mijn installatie wil ik de receptie letterlijk in het zonnetje zetten. Een lichtbron is hierbij de oplossing. 
+
+Waarom werk ik met aanraking?
+Ik wil dat de gebruiker letterlijk aandacht geeft aan een object, zoals je aandacht geeft aan een dier. Vervolgens wil ik deze aandacht verplaatsen.
+Daarbij roept mijn object om aangeraakt te worden, door zijn zachte structuuur. Het is een interactie die opgeroepen wordt zonder instructies. 
+Studenten zullen uit zichzelf al aan Moni gaan zitten. 
+
+Waarom werkt de dimmer niet?
+Een lichtsensor werkt niet zoals een button. Als de waarde onder X is, dan speelt hij geluid af, maar dit checkt hij iedere frame. 
+Ik weet dus nog niet zo goed hoe ik dit wel voor elkaar kan krijgen. Ik gok met een boolean/timer, maar ik heb dit niet getest.
+
+Waar lag de uitdaging?
+Ik heb nog niet eerder zelf met een lichtsensor gewerkt. In die zin was dit de uitdaging. Toch was er dit project voor mij weinig technische
+uitdaging en was het meer een kwestie van goed afstellen en goed solderen. 

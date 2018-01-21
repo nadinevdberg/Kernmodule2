@@ -1,0 +1,8 @@
+Inhoud van de mappen:
+- Alle opdrachten met 'Les' ervoor, zijn opdrachten uit de lessen en/of huiswerk
+- Alle opdrachten met 'Trial' ervoor zijn technishce experimenten met de Arduino
+- De uiteindelijke code van de eindpresentatie staat in 'DefCode_Moni_Postmortem'
+- Eindopdracht_001 was mijn poging om een opzet te maken in openFrameworks. Dit is dus niet gelukt omdat ik niet wist
+dat ik booleans moest gebruiken. Hier is dus weinig in te zien verder. 
+
+Succes met nakijken! 

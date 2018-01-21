@@ -1,5 +1,6 @@
 #include <Servo.h>
 #define PIN_LED 11
+#define PIN_LED2 12
 
 #define STEP_FORWARD 10// doen we voor servo
 #define STEP_BACK -10
@@ -13,18 +14,19 @@ long servoStepTime = 0l; //tijd -- 0LONG
 
 Servo myServo;
   
-volatile byte state = LOW;                                                 // nodig voor interupt. variabele voor button status
+volatile byte state = HIGH;                                                 // nodig voor interupt. variabele voor button status
 //_____________________________________________________________________
 
 void setup() {
 Serial.begin(9600);  //open de seriële verbinding
 myServo.attach(9);
+attachInterrupt(digitalPinToInterrupt(3),buttonISR, CHANGE);               // nodig voor interupt, linkt de interupt aan de button
 
 pinMode(11, OUTPUT);
 pinMode (12, OUTPUT);
 pinMode(A0, INPUT);
-pinMode(2, INPUT_PULLUP);                                                  // nodig voor interupt, geeft aan wat pin 2 is
-attachInterrupt(digitalPinToInterrupt(2),buttonISR, CHANGE);               // nodig voor interupt, linkt de interupt aan de button
+pinMode(3, INPUT_PULLUP);                                                  // nodig voor interupt, geeft aan wat pin 2 is
+
 
 }
 
@@ -33,7 +35,7 @@ int value = analogRead(A0);
 Serial.print("value = ");
 Serial.println(value);
 
-digitalWrite (12, state); //zorgt dat het ledje op 12 aan of uit gaat
+digitalWrite (PIN_LED2, state); //zorgt dat het ledje op 12 aan of uit gaat
 
 
 
@@ -68,6 +70,7 @@ if (currentTimeMS - servoStepTime > 15){
 } // einde void loop
 
 void buttonISR(){
+
   state = !state;
 }
 
